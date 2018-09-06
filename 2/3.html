@@ -1,0 +1,120 @@
+<!--
+  주제 : 오늘의 할일 목록(to-do list)
+  작업순서 : 화면구조
+            ==>디자인
+            ==>로직추가 :
+            1. 데이터의 구조 결정 : e,g) 배열, 객체, 문자열, 숫자..
+            2. 가짜 데이터를 사용한 화면 표시
+            3. 동적으로 사용자의 이벤트에 따라서 데이터를 갱신한다
+            4. 진짜 데이터를 구해온다
+
+  단축키list ctrl+alt+/
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>to-do</title>
+
+  <link href="../vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet">
+  <style media="screen">
+    body{
+         margin: 30px;
+      }
+      label{
+         margin-right: 5px;
+      }
+      input[type=text] {
+        width: 80px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        /* border-radius: 4px; */
+        font-size: 16px;
+        background-color: white;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 5px 10px 5px 10px;
+        transition: width 0.5s ease-in-out;
+        margin-bottom: 10px;
+      }
+      input[type=text]:focus {
+        width: 30%;
+      }
+  </style>
+
+  <script type="text/javascript">
+    var tasks = [
+      {id: 1, title: "수업참가"},
+      {id: 2, title: "과제풀기"},
+      {id: 3, title: "저녁회식"}
+    ]
+  </script>
+</head>
+
+<body>
+
+  <div class="">
+    <h3>To-do List</h3>
+    <form action="" class="form">
+      <label for="task">Task </label>
+      <input type="text" name="task" id="task"
+        placeholder="Input..">
+      <!-- name==key , value==값 -->
+      <button type="button" name="button"
+        onclick="buttonClicked()">추가</button>
+    </form>
+    <ul>
+      <!-- <li>수업참가</li>
+      <li>과제풀기</li>
+      <li>친구와 저녁약속</li> -->
+    </ul>
+  </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+function buttonClicked() {
+  // input 박스에 입력한 값을 보여주자
+  var inputBox = document.getElementById('task');
+  var value = inputBox.value;
+
+  // alert('clicked');
+
+  // 자바스크립트는 배열이 아주 강력하여 자바의 콜렉션과 맞먹는 기능을
+  // 제공한다. 자바의 배열은 보관하는 갯수가 고정이지만
+  // 자바스크립트의 자바의 List와 유사하다
+  // console.log(tasks);
+  var nextId = tasks.length+1;
+  var newTask = {id:nextId, title:value};
+  // console.log(Array.isArray(tasks));
+  tasks.push(newTask);
+  // console.log(tasks);
+
+  // 배열 데이터를 사용하는 화면을 갱신합니다
+  var aryUl = document.getElementsByTagName("ul");
+  var elem = aryUl[0];
+  var task = tasks[tasks.length-1];
+  var html = "<li>" + task.title + "</li>";
+  elem.innerHTML = elem.innerHTML + html;
+  inputBox.value = "";
+}
+
+// getElementById, getElementsByTagName 단,복수 구분주의
+// id는 고유하기 때문에 단수
+  var aryUl = document.getElementsByTagName("ul");
+  // ul이 여러개라면 그 중 몇번째 ul에 입력할것인지 지정
+  var elem = aryUl[0];
+
+  var html = "";
+  for (var i = 0; i < tasks.length; i++) {
+    var task = tasks[i];
+    html = html + "<li>" + task.title + "</li>";
+  }
+  elem.innerHTML = html;
+
+</script>

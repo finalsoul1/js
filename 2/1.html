@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <script type="text/javascript">
+    /*
+        자바스크립트를 사용하여
+        원격 서버와 대화하고 필요한 데이터를 구한다
+      */
+    // Java
+    // class User {
+    //   int id;
+    //   String name;
+    //   int age;
+    // }
+    // User[] users = {
+    //   new User(10, "홍길동", 20)
+    //   new User(11, "일지매", 22)
+    // }
+    var users = [
+      {id: 10,name: "홍길동",age: 20},
+      {id: 11,name: "일지매",age: 22},
+      {id: 12,name: "구운몽",age: 25}
+    ];
+    //브라우저가 위에서부터 순서대로 처리한다
+    //이 시점에는 body 부분에 엘리먼트가 처리가 되기전이므로
+    //엘리먼트 객체를 참조해서 데이터를 추가할 수 없다
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h3>Users List</h3>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>age</th>
+        </tr>
+      </thead>
+
+      <tbody id="target">
+        <!-- <tr>
+          <td>10</td>
+          <td>홍길동</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>일지매</td>
+          <td>22</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    console.log(document);
+    // 도큐먼트는 처리된 엘리먼트들의 트리 객체를 참조하므로
+    // 도큐먼트로부터 원하는 엘리먼트를 참조값을 획득할 수 있다
+    var elem = document.getElementById("target");
+    console.log(elem);
+    var html = "";
+    // for(User user : users){
+    //}
+    for (user of users) {
+      html += "<tr>"; // html = html + "<tr>";
+      html += "<td>" + user.id + "</td>";
+      html += "<td>" + user.name + "</td>";
+      html += "<td>" + user.age + "</td>";
+      html += "<tr>";
+    }
+    elem.innerHTML = html;
+  </script>
+
+
+</body>
+
+</html>
