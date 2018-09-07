@@ -10,7 +10,7 @@ const obj = { b: 2, c: 3, d: 4 };
 // console.log(c);
 
 // 해체 할당
-const {a, b, c} = obj; // 객체선언이 아님
+const {a, b, c} = obj; // 대입연산자 앞의 {}은 객체선언이 아님
 console.log(a); // undefined: there was no property "a" in obj
 console.log(b); // 2
 console.log(c); // 3

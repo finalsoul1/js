@@ -28,7 +28,7 @@ var obj = {
     }
     increase();
   }
-}
+};
 
 obj.increase();
 

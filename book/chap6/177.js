@@ -4,7 +4,7 @@ const o = {
   speak() {
     return `My name is ${this.name}!`;
   },
-}
+};
 
 console.log(o.speak()); // "My name is Wallace!
 
