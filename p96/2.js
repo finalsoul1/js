@@ -18,6 +18,8 @@ console.log(typeof json); // string
 console.log(json); // {"a":10, "b":20}
 // 주의 : JSON 포멧일 때 프로퍼티를 감싸는 "" 기호가 꼭 필요함
 
+console.log('-----------------------');
+
 var object = JSON.parse(json); // object
 console.log(typeof object); // {a:10, b:20}
 console.log(object); 

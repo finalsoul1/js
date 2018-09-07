@@ -37,8 +37,6 @@ for (var variable in object) {
       object[variable](); // 함수호출 -> object["print"]() -> object.print()
   }
   
-    
-    
-    
+
   // }
 }
