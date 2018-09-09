@@ -1,6 +1,6 @@
 // int a = 10;
-// Integer b = a; 
-// auto-boxing : 원시타입 a의 값이 자동으로 
+// Integer b = a;
+// auto-boxing : 원시타입 a의 값이 자동으로
 // 객체타입 Integer 자료형의 변수에 할당된다.
 
 // short x = (short)a;
@@ -13,6 +13,8 @@ const s = "hello";
 console.log(s.toUpperCase());
 console.log(s);
 
-s.myProp = 3; // 
+
+
+s.myProp = 3; //
 console.log(s);
 console.log(s.myProp);

@@ -23,7 +23,7 @@ let f; // undefined function
   f = function() { // 함수는 범위연산자 맞음, 함수스코프
     return o;
   };
-} 
+}
 
 let oRef = f(); // () = 함수를 실행하자.
 
@@ -32,4 +32,3 @@ console.log(oRef);
 oRef.note = "Not so safe after all!";
 
 console.log(oRef);
-

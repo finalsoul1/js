@@ -15,7 +15,7 @@ function foo() {
   // 자동으로 bind 되고 고정된다.
   var fn = () => console.log(this.a);
   // 화살표 함수 = 일반함수.bind(가장 가까운 this);
-  
+
   setTimeout(fn, 100);
 }
 

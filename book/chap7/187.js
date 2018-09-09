@@ -1,5 +1,5 @@
 // 자바스크립트의 스코프는 크게 2가지가 있다
-// 1. 글로벌 스코프: 
+// 1. 글로벌 스코프:
 //    파일 시작 ~ 파일 끝
 //    소스코드를 여러 파일로 나눈 후 임포트해서 사용하면
 //    글로벌 스코프가 확장된다.
@@ -20,6 +20,6 @@ function f(x) {
 }
 
 // 격리된 함수 f에 존재하는 자원을 외부에서 접근할 수 없다
-console.log(x) // ReferenceError: x is not defined
+// console.log(x); // ReferenceError: x is not defined
 
 console.log(f(5)); // 8

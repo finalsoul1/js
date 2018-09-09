@@ -27,7 +27,7 @@ this.occupation = occupation;
 update(1949, 'singer');
 
 // call(부르는객체, 파라미터, 파라미터)
-update.call(bruce, 1949, 'singer'); 
+update.call(bruce, 1949, 'singer');
 // bruce is now { name: "Bruce", birthYear: 1949, occupation: "singer" }
 update.call(madeline, 1942, 'actress');
 // madeline is now { name: "Madeline", birthYear: 1942, occupation: "actress" }
@@ -36,7 +36,7 @@ console.log(bruce);
 console.log(madeline);
 
 // apply(부르는객체, [파라미터들]) // 배열을 낱개로 잘라서 파라미터로 전달함
-update.apply(bruce, [1955, "actor"]); 
+update.apply(bruce, [1955, "actor"]);
 // bruce is now { name: "Bruce", birthYear: 1955,
 // occupation: "actor" }
 update.apply(madeline, [1918, "writer"]);

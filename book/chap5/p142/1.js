@@ -1,8 +1,8 @@
 const x = 5;
 console.log(-x);
-console.log(3- -5);
-console.log(3-(-5)); // 3+5
-const y = 3- -x; // Bad!
+console.log(3 - -5);
+console.log(3 - (-5)); // 3+5
+const y = 3 - -x; // Bad!
 console.log(y);
 
 console.log('----------------------');
@@ -17,10 +17,10 @@ var str1 = "10";
 var str2 = "10";
 var str3 = new String("10");
 
-console.log(str1 == str2);
-console.log(str1 === str2);
-console.log(str1 == str3);
-console.log(str1 === str3);
+console.log('#1', str1 == str2);
+console.log('#2', str1 === str2);
+console.log('#3', str1 == str3);
+console.log('#4', str1 === str3);
 
 console.log(10 == '10'); // true
-console.log(10 === '100'); // false
+console.log(10 === '10'); // false

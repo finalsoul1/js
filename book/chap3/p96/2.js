@@ -12,7 +12,7 @@ var obj = {
   }
 };
 
-var json = JSON.stringify(obj);
+var json = JSON.stringify(obj); // 객체를 JSON 문자열로 표기
 
 console.log(typeof json); // string
 console.log(json); // {"a":10, "b":20}
@@ -20,9 +20,9 @@ console.log(json); // {"a":10, "b":20}
 
 console.log('-----------------------');
 
-var object = JSON.parse(json); // object
+var object = JSON.parse(json); // object // JSON문자열을 다시 객체상태로
 console.log(typeof object); // {a:10, b:20}
-console.log(object); 
+console.log(object);
 
 var ary = [10, 20, 30,];
 

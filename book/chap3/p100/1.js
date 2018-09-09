@@ -13,14 +13,17 @@ console.log(numStr + 10); // 33.310
 console.log(num + 10); // 43.3
 
 const d = new Date();
+console.log(d);
 const ts = d.valueOf()
 console.log(ts); // 1536219050498 < 1536219075270
 
 const n = 33.5;
 console.log(typeof n);
-// const s = n.toString();
+// const s = n.toStrin`g();
 const s = "" + n; // 숫자에 문자열 더하면 문자열됨.
 console.log(typeof s);
+
+console.log('-------------------');
 
 const n1 = 0; // 관습적으로 0:false, 1:true
 console.log(typeof !n1); // 자료형이 boolean으로 바뀜, 근데 !한번쓰면 의도했던 값까지 바껴버림
@@ -35,4 +38,3 @@ if (!!n1) {
 } else {
   console.log('False');
 }
-

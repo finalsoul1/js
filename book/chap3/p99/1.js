@@ -9,11 +9,14 @@ console.log(now.getHours()); // 16
 console.log(now.getMinutes()); // 10
 console.log(now.getSeconds()); // 8
 
+
 // 2018-12-25일은 무슨 요일인가요?
 
 const xmas = new Date(2018, 11, 25);
 
 console.log(xmas.getDay()); // 2 (0은 일요일) 화요일
+
+console.log('-------------------');
 
 const email = /@/gi; // /사이에 있는 문자열이 있는가 확인함
 /*
