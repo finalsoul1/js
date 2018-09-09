@@ -11,3 +11,15 @@ obj.x = 10; // x는 문자열 "x"로 취급된다.
 obj[SIZE] = 8; // 유니크한 심볼을 프로퍼티 키로 사용하는 방법
 
 console.log(obj[SIZE]);
+
+console.log(obj);
+
+obj.SIZE = 1;
+
+console.log(obj);
+
+const sym = Symbol();
+
+obj[sym] = 2;
+
+console.log(obj);

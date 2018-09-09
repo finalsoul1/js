@@ -2,7 +2,7 @@
 //   int a = 10;
 //   B b = new B();
 // }
-// 
+//
 // class B {
 //   String c = "Hi";
 // }
@@ -14,3 +14,4 @@ var obj = {
   }
 };
 
+console.log(obj);
