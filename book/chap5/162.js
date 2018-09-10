@@ -9,6 +9,7 @@ console.log(a, b, c);
 
 // this works:
 ({a, b, c} = obj); // 괄호 왜 치는지?
+// 객체 리터럴의 중괄호를 블록으로 판단할까봐
 
 console.log(a, b, c);
 
