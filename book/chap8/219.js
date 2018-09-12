@@ -16,3 +16,13 @@ if (stats.N > 2) {
   stats.variance = stats.M2 / (stats.N - 1);
   stats.stdev = Math.sqrt(stats.variance);
 }
+
+console.log(stats);
+
+
+//    a                            x                     return
+//  {N:0, mean: 0, M2: 0}        data[0]:3.3         {N:1, mean: 3.3, M2: 0}
+//   delta = 3.3;
+
+//  {N:1, mean: 3.3, M2: 0}      data[1]:5          {N:2, mean: } 
+//   delta = 1.7

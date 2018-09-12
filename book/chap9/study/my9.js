@@ -4,6 +4,12 @@ class Car {
   }
 }
 
+// class Car { 
+//   constructor(color = 'Red'){
+//     this.color = color;
+//   }
+// }
+
 // Sedan Is-A Car
 class Sedan extends Car {
   // constructor 함수를 생략하면 넣어준다.
@@ -11,8 +17,8 @@ class Sedan extends Car {
   
   // ReferenceError: Must call super constructor in derived 
   // class before accessing 'this' or returning from derived constructor
-  constructor(){
-    super(); // 해결
+  constructor(color){
+    super(color); // 해결
   }
 }
 

@@ -15,3 +15,5 @@ Object.keys(obj) // [ 'a', 'b', 'cc' ]
       .filter(prop => prop.length < 2) // [ 'a', 'b' ]
       .forEach(prop => 
         console.log(`${prop}:${obj[prop]}`));
+        
+Object.keys.forEach(prop => )

@@ -8,7 +8,7 @@ console.log(ret);
 arr.concat([4, 5, 6]); // returns [1, 2, 3, 4, 5, 6]; arr unmodified
 arr.concat([4, 5], 6); // returns [1, 2, 3, 4, 5, 6]; arr unmodified
 
-// 1차원 배열은 풀렸으나 2차원 배열은 안 풀고 바로 적용한다.
+// 1차원 배열은 풀렸으나 2차원 배열은 안 풀고 그대로 적용한다.
 arr.concat([4, [5, 6]]); // returns [1, 2, 3, 4, [5, 6]]; arr unmodified
 
 console.log('---------1--------');

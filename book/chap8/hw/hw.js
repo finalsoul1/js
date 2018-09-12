@@ -8,7 +8,7 @@ let id = 0;
 
 // 배열에 추가하는 함수
 function addTodo(title) {
-  id++;
+  id = todos.length + 1;
   let todo = {
     id,
     title,
@@ -58,8 +58,7 @@ function doneTrue(id) {
 
 // 배열의 해당 객체를 삭제하는 함수 #B
 function tableErase(id) {
-  id--;
-  todos.splice(id, 1);
+  todos.splice((id-1), 1);
 }
 
 function buttonDone(id) {
