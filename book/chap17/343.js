@@ -15,3 +15,4 @@ console.log(reg instanceof RegExp); // true, 정규표현식 객체
 
 const output = input.replace(reg, '****'); 
 console.log(output);
+

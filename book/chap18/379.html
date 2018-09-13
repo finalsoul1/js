@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <button data-action="highlight" data-containing="unique">
+    Highlight paragraphs containing "unique"
+  </button>
+  <button data-action="removeHighlights">
+    Remove highlights
+  </button>
+
+
+  
+  <input type="number" name="">
+  <input type="email" name="" value="11">
+  <input type="email" name="" value="22">
+
+  <script type="text/javascript">
+  
+    const highlightActions = 
+          document.querySelectorAll('[data-action="highlight"]');
+          // data-action 속성이 있어야한다. 걔한테 할당된 값은 "highlight"이다
+          // css 문법 []: [속성], ex) type, name, input[type="email"]
+          
+    console.log(highlightActions[0].dataset);
+    // DOMStringMap {
+    //   action: "highlight", 
+    //   containing: "unique"
+    // }
+    // action:"highlight"
+    // containing:"unique"
+    // __proto__:DOMStringMap
+    
+    highlightActions[0].dataset.containing = "giraffe";
+    highlightActions[0].dataset.caseSensitive = "true";
+    
+    console.log(highlightActions[0].dataset);
+    
+  </script>
+
+</body>
+
+</html>

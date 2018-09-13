@@ -10,7 +10,6 @@ console.log(matches);
     이 안쪽에 태그는 없다. 다 문자열로 취급하라
     <br> 이것은 태그가 아니다.
   ]]
-
 */
 
 var html = '<br> [!CDATA[[<br>]]';

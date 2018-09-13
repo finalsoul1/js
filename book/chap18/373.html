@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style media="screen">
+      .blue {
+        color: blue;
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <!-- 여러개의 클래스를 동시에 부여할 수 있다. -->
+    <p class="light center jumbotron">111</p>
+    <p name="second">222</p>
+    <p class="light">333</p>
+    <p id="unique">444</p>
+    
+    
+    <script type="text/javascript">
+      var elems = document.getElementsByTagName('p');
+      console.log(Array.isArray(elems)); // false
+      console.log(elems instanceof HTMLCollection); // true
+      console.log(elems);
+      
+      // 배열 처럼 쓸수있는 객체, 프로퍼티가 배열의 인덱스같은 0,1,2,3
+      // for (var i = 0; i < elems.length; i++) { 
+      //   elems[i].innerHTML = '555';
+      // }
+      
+      for (var prop in elems) {
+        if (elems.hasOwnProperty(prop)) {
+          elems[prop].innerHTML = '666';
+        }
+      }
+      
+      var elems = document.getElementsByClassName('light');
+      console.log(elems.length);
+      
+      // Array, HTMLCollection 객체는 이미
+      // Iteration 규약이 적용되어서 for-of문을 사용할 수 있다.
+      // 배열은 iterator객체
+      for (let elem of elems) {
+        // elem.classList = 'blue red';
+        elem.classList.add('blue');
+      }
+      
+      var target = document.getElementById('unique');
+      target.style = 'font-size: 200%';
+      
+      var elems = document.getElementsByName('second')
+      elems[0].style = 'font-size: 300%';
+      
+    </script>
+    
+  </body>
+</html>

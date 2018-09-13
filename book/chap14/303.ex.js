@@ -3,7 +3,7 @@ const EventEmitter = require('events').EventEmitter; // EventEmitter 프로퍼�
 function Counter(max) {
   this.start = function() {
     this.emit('start');
-    let self = this;
+    // let self = this;
     let intervalId = setInterval(() => {
       max--;
       self.emit('count', max);

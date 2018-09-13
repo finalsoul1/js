@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  
+  <!-- event: 예약어, 이벤트관련 객체를 전달한다. -->
+  <p onclick='btnClick(event)'>111</p>
+  <!-- this: 예약어, 이벤트를 촉발한 엘리먼트 참조값을 전달한다. -->
+  <p onclick='btnClick2(this)'>222</p>
+  
+  <button type="button">333</button>
+  <button type="button">444</button>
+  <button type="button">555</button>
+
+  <script type="text/javascript">
+
+    function btnClick(e) {
+      console.log(e);
+      alert(e.target.innerHTML);
+      // innerHTMl로 값을 꺼내옴.
+    }
+    function btnClick2(elem) {
+      console.log(elem);
+      alert(elem.innerHTML);
+      // innerHTMl로 값을 꺼내옴.
+    }
+    
+    var buttons = document.querySelectorAll('button');
+    for (var button of buttons) {
+      // addEventListener는 파라미터로 event객체 하나만 받음
+      button.addEventListener('click', function(e) {
+        alert(e.target.innerHTML);
+      });
+      // 사용자가 '클릭'하면 익명함수를 호출한다.
+    }
+    
+  </script>
+
+</body>
+
+</html>

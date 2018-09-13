@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style media="screen">
+      .blue {
+        color: blue;
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <!-- 여러개의 클래스를 동시에 부여할 수 있다. -->
+    <p class="light center jumbotron">111</p>
+    <p name="second">222</p>
+    <p class="light">333</p>
+    <p id="unique">444</p>
+    
+    
+    <script type="text/javascript">
+      
+      // var elems = document.getElementsByClassName('light');
+      var elems = document.querySelectorAll('.light');
+      for (var prop in elems) {
+        if (elems.hasOwnProperty(prop)) {
+          elems[prop].innerHTML = '888';
+        }
+      }
+    </script>
+    
+  </body>
+</html>
