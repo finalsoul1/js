@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('p:odd').css('color', 'red');
+      $('p:even').css('color', 'blue');
+
+      // 계속 $객체를 리턴하기때문에 연달아 .을 찍을 수 있다.
+      // :odd = 셀렉트odd
+      // $('h3').after('<hr>').append('<sup>*</sup>').filter(':odd') // 홀수 뺌
+      //   .css('color', 'red');
+
+      // $('h3')
+      //   .after('<hr>')
+      //   .not('.highlight')
+      //   .css('margin-left', '20px');
+
+      // $('p')
+      //   .before('<hr>')
+      //   .find('.code')
+      //   .css('font-size', '30px');
+      
+      // 제이쿼리 객체를 벗은것
+      const para2 = $('h3').get(1);
+      
+      // Monad Pattern
+      console.log($('h3') instanceof $); // true
+      console.log($('h3').get(1) instanceof $); // false
+      console.log($('h3').get(1) instanceof HTMLElement); // true
+    })
+  </script>
+</head>
+
+<body>
+
+  <h3>aaa</h3>
+  <h3 class = "highlight">bbb</h3>
+  <h3>ccc</h3>
+
+  <p>222</p>
+  <p>333</p>
+  <i class="code">444</i>
+
+  <div class="blue">
+    <p>444</p>
+  </div>
+
+</body>
+
+</html>

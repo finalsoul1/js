@@ -20,8 +20,6 @@
     
     <div onclick="clickDiv(event)"></div>
     
-    
-    
     <script type="text/javascript">
       // body 영역은 콘텐츠 길이만큼만 먹는다(가로는 100%)
       // background-color는 서비스로 다 칠해주는거임
@@ -32,6 +30,8 @@
         console.log(e);
         alert('clickDiv');
         e.stopPropagation();
+        
+        return false;
         // 현재 이벤트가 상위로 전파되지 않도록 중단한다.
       }
       // 가장 바깥쪽에서 이벤트를 캐치해서 실행은 시키지않고 이벤트를 

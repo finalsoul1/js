@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>job</th>
+        </tr>
+      </thead>
+      <tbody id="target">
+        <!-- <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr> -->
+      </tbody>
+    </table>
+    
+  </div>
+
+  <script type="text/javascript">
+  
+    var tbody = document.querySelectorAll("#target");
+    // var tbody = document.getElementById('target');
+  
+    function renderTable(users) {
+      var html = '';
+      for (var prop of users) {
+        html += `
+        <tr>
+          <th>${prop.id}</th>
+          <th>${prop.name}</th>
+          <th>${prop.job}</th>
+        </tr>`
+      }
+      tbody.innerHTML = html;
+    }
+  
+  
+    function refreshServerInfo() {
+      const req = new XMLHttpRequest();
+      req.addEventListener('load', function() {
+        console.log(1);
+        // 그냥 주석
+        // TODO: 작업내용, HTML에 내용을 표시해야 한다.
+        // FIXME: 버그가 있다. 바로 고쳐야 한다.
+        // XXX: 중요하다.
+        console.log(this.responseText);
+        console.log(typeof this.responseText);
+        var users = JSON.parse(this.responseText);
+        console.log(typeof users);
+        
+        renderTable(users);
+        
+      });
+      req.open('GET', 'http://localhost:3000/users', true); // 설정
+      req.send(); // 가져오기
+    }
+    refreshServerInfo();
+  </script>
+
+</body>
+
+</html>
