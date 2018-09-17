@@ -11,7 +11,3 @@
 // })(1);
 // 
 
-
-console.log(Refwith);
-
-var x =Reflect.ownKeys(with;
