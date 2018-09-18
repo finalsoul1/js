@@ -4,7 +4,7 @@
   관객이 가수 객체를 사용하는 것은 똑같다.
   매니저(프락시)를 통해 가수 객체에 접근하게 되면
   매니저가 제공하는 부가 기능을 이용할 수 있는 혜택이 있다.
-  
+
   메타 프로그래밍이란?
   프로그램이 자기자신을 수정하는 것이다.
 */
@@ -18,7 +18,7 @@ const coefficients = {
   a: 1,
   c: 3,
 };
-// evaluate 함수 개발자의 의도와 다르게 부족한 값을 
+// evaluate 함수 개발자의 의도와 다르게 부족한 값을
 // 파라미터로 전달하면 계산이 엉망이 됩니다.
 // 어떻게 막을 수 있을까요?
 
@@ -33,4 +33,4 @@ const betterCoefficients = new Proxy(coefficients, {
 });
 
 let result = evaluate(5, betterCoefficients);
-console.log(result); // NaN
+console.log(result); // 76
