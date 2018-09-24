@@ -5,7 +5,7 @@ console.log(this); // {} 빈 객체
 
 console.log(this === exports); // true
 // exports: 노드가 제공하는 예약어로 객체.
-// 이 파일에서 다른 파일로 제공하고 싶은 자원을 직접 선택하여 
+// 이 파일에서 다른 파일로 제공하고 싶은 자원을 직접 선택하여
 // 노출하고 싶을 때 등록하는 객체입니다.
 
 // 파일단위로 노드 컴파일러가 exports로 감싼다.
@@ -18,7 +18,7 @@ console.log(1);
   var x = 1000;
   var a = 10;
   console.log(2, a);
-  
+
   // export: 제공하고 싶은 자원을 직접 선택하여 노출해야 합니다.
   outlet.A = { // A 문자열이 패키지 역할을 수행
     a
@@ -27,10 +27,10 @@ console.log(1);
 
 console.log(3);
 
-(function (outlet) { // 개발자 B
+(function (outlet) { // 개발자 B`
   var a = 20;
   console.log(2, a);
-  
+
   outlet.B = { // B 문자열이 패키지 역할을 수행
     a
   };
